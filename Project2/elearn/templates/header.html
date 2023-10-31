@@ -1,0 +1,81 @@
+{%  extends 'base.html' %}
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/bootstrap.css" />
+    <style type="text/css">
+        [class*=row] {
+            background-image: linear-gradient(30deg, red, yellow, purple);
+
+        }
+
+
+        [class*=col] {
+            background-color: grey;
+            text-align: center;
+            padding: 2rem;
+            margin: 10px;
+            height: fit-content;
+
+            //font-size: auto;
+
+           }
+
+
+
+
+
+        }
+    </style>
+
+{%  block body %}
+        <div class="container-fluid" data-spy="scroll" data-targget=".navbar">
+        <div class="Header" style="margin-top: 70px">
+        <div class="row" >
+
+            <nav class="col-md-8 mx-0">
+                <div style="letter-spacing: 2px;color: aqua;text-align: left; padding-right: 1px;width: 20px;">
+                    <h3 style="font:bolder 38px cursive;" > ArunGagan </h3>
+                </div>
+            <nav class="navbar navbar-expand-lg  fixed-top">
+            <div class="container-xxl" id="col">
+
+                <a href="#into" class="navbar-brand "><h3>Learning Platform</h3></a>
+                <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#Navbarnav"
+                aria-controls="Navbarnav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-end" id="Navbarnav">
+                    <ul class="navbar-nav mr-auto ">
+                         <li class="nav-item"><a href="/login" class="btn btn-primary">Home </a></li>
+                        <li class="nav-item"><a href="/dashboard" class="btn btn-primary">About </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills" >Achievement</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects" >Contacts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Contact" >Login</a></li>
+                        <li class="nac-item"><div style="background-color:white;color:grey" ><input type="text" id="123" value="Search" /></div></li>
+                    </ul>
+            </div>
+        </nav>
+            </nav>
+    </div>
+        </div>
+        </div>
+<script>
+    function a(){
+var x=document.getElementById("123");
+var y=x.value;
+console.log(y);
+document.getElementById(y).style.backgroundColor="red";color:blue}
+
+document.addEventListener("keypress",a());
+
+</script>
+
+ {%  endblock %}
